@@ -37,7 +37,7 @@ app.post("/api/contact", contactLimiter, async (req, res) => {
   try {
     // ✅ Send Email via Resend
     const data = await resend.emails.send({
-      from: "contact@editionrealty.in", // you can later replace with verified domain
+      from: "Edition Realty <contact@editionrealty.in>", // you can later replace with verified domain
       to: process.env.CLIENT_EMAIL, // where you want to receive messages
       reply_to: email, // allow reply directly to sender
       subject: `New Inquiry: ${subject}`,
